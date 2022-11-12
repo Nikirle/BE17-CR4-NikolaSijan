@@ -34,10 +34,11 @@ if ($_GET['id']) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Delete Product</title>
         <?php require_once 'components/boot.php'?>
+        <link rel="stylesheet" href="style.css">
         <style type= "text/css">
             fieldset {
                 margin: auto;
-                margin-top: 100px;
+                margin-top: 50px;
                 width: 70% ;
             }     
             .img-thumbnail{

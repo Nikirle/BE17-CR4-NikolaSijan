@@ -32,10 +32,11 @@ if ($_GET['id']) {
     <head>
         <title>Edit Product</title>
         <?php require_once 'components/boot.php'?>
+        <link rel="stylesheet" href="style.css">
         <style type= "text/css">
             fieldset {
                 margin: auto;
-                margin-top: 100px;
+                margin-top: 50px;
                 width: 60% ;
             }  
             .img-thumbnail{
@@ -63,7 +64,7 @@ if ($_GET['id']) {
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td><textarea name="description"  cols="100" rows="5" ><?php echo $description ?></textarea></td>
+                        <td><textarea name="description"  cols="100" rows="3" ><?php echo $description ?></textarea></td>
                     </tr>
                     <tr>
                         <th>Author First Name</th>

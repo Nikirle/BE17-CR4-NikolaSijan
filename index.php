@@ -18,9 +18,14 @@ if(mysqli_num_rows($result)>0){
             <td>" .$row['publisher_address']."</td>
             <td>" .$row['publish_date']."</td>
             <td>" .$row['status']."</td>
+            <td>
+            <a href='update.php?id=" .$row['id']."'><button class='btn btn-primary  btn-sm' type='button'>Edit</button></a>
+            <a href='delete.php?id=" .$row['id']."'><button class='btn btn-danger mt-3 btn-sm' type='button'>Delete</button></a>
+            <a href='details.php?id=" .$row['id']."'><button class='btn btn-info btn-sm mt-3' type='button'>Details</button></a>
+           
+            </td>
+           
 
-            <td><a href='update.php?id=" .$row['id']."'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
-            <a href='delete.php?id=" .$row['id']."'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
             </tr>";
     };
 } else {
@@ -30,9 +35,6 @@ if(mysqli_num_rows($result)>0){
 
 mysqli_close($connect); 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +47,7 @@ mysqli_close($connect);
     <?php require_once './components/boot.php' ?>
 </head>
 <body>
-    <h1 class="h1">Big Library</h1>
+    <h1 class="h1 p-3">My Big Library</h1>
     <div class="margin">
     <div class='mb-3'>
                 <a href= "create.php"><button class='btn btn-primary'type="button" >Add Item</button></a>

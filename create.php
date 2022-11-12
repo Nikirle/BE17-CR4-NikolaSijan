@@ -4,17 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php require_once 'components/boot.php'?>
+        <link rel="stylesheet" href="style.css">
         <title>Add product</title>
-        <style>
-            fieldset {
-                margin: auto;
-                margin-top: 100px;
-                width: 60% ;
-            }       
-        </style>
+       
     </head>
     <body>
-        <fieldset>
+        <fieldset class="margin1">
             <legend class='h2'>Add Item</legend>
             <form action="actions/a_create.php" method= "post" enctype="multipart/form-data">
                 <table class='table'>
@@ -32,7 +27,7 @@
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td><textarea name="description"  cols="100" rows="5" placeholder="Short Description..."></textarea></td>
+                        <td><textarea name="description"  cols="100" rows="3" placeholder="Short Description..."></textarea></td>
                     </tr>
                     <tr>
                         <th>Author First Name</th>

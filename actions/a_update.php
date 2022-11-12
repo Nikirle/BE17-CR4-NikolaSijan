@@ -15,6 +15,7 @@ if ($_POST) {
     $publishDate = $_POST['publishDate'];
     $status = $_POST['status'];
     $image = file_upload($_FILES['image']);
+    $uploadError = '';
 
     if($image->error===0){
         ($_POST["image"]=="default.jpg")?: unlink("../images/$_POST[image]");    
@@ -44,12 +45,11 @@ if ($_POST) {
         <meta charset="UTF-8">
         <title>Update</title>
         <?php require_once '../components/boot.php'?> 
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
-            <div class="mt-3 mb-3">
-                <h1>Update request response</h1>
-            </div>
+        <div class="container mt-3">
+            
             <div class="alert alert-<?php echo $class;?>" role="alert">
                 <p><?php echo ($message) ?? ''; ?></p>
                 <p><?php echo ($uploadError) ?? ''; ?></p>

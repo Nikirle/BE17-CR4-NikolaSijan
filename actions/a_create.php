@@ -77,12 +77,11 @@ if($_POST){
         <meta charset="UTF-8">
         <title>Update</title>
         <?php require_once '../components/boot.php'?>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
-            <div class="mt-3 mb-3">
-                <h1>Create request response</h1>
-            </div>
+        <div class="container mt-3">
+            
             <div class="alert alert-<?=$class;?>" role="alert">
                 <p><?= $message;?></p>
                 <p><?= $uploadError;?></p>
